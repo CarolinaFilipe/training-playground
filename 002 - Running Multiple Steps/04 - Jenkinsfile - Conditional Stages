@@ -19,7 +19,7 @@ pipeline {
 			environment name: 'TOEXECUTE', value: 'test'
 		}
 		steps {
-		echo "executing the build stage"
+		echo "executing the test stage"
 		}
     		}
     }

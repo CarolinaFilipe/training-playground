@@ -1,14 +1,23 @@
 pipeline {
-    agent { 
-		docker { 
-			image 'alpine:latest' 
-		}
-	}
+    agent any
+    
     stages {
         stage('build') {
             steps {
                 sh "exit \$((RANDOM % 2))"
             }
+        }
+    }
+    
+    post { 
+        success { 
+            echo 'Success'
+        }
+	always { 
+            echo 'Always'
+        }
+	failure { 
+            echo 'Fail'
         }
     }
 }

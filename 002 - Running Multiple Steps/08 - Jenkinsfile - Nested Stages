@@ -1,17 +1,26 @@
 pipeline {
     agent none
     stages {
-    	stage('build'){
-		agent {
-			docker{
-				image 'maven:3.3.3'
-				image 'node:6.3'
-			}
-		}
-		steps {
-			sh "mvn --version"
-			sh "npm --version"
-		}
-	}
+        stage('buildMaven') {
+        agent {
+            docker {
+                image 'maven:3.3.3'
+            }
+        }
+        steps {
+            sh "mvn --version"
+        }
+    }
+       stage('buildNpm') {
+        agent {
+            docker {
+                image 'node:6.3'
+            }
+        }
+        steps {
+            sh "npm --version"
+	    sh "mvn --version"
+        }
+    }
     }
 }

@@ -2,7 +2,7 @@ pipeline {
     agent { 
         dockerfile {
             dir '005 - Recording Test Results and Artifacts'
-            filename '01 - Dockerfile - Archive Artifact'
+            filename '01 - Docker - Jenkinsfile - Archive Artifact'
         }
     }
     stages {

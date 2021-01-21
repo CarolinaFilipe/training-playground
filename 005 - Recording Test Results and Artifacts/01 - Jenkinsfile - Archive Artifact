@@ -1,7 +1,8 @@
 pipeline {
     agent { 
-		docker { 
-			image 'alpine:latest' 
+		dockerfile { 
+			dir '005 - Recording Test Results and Artifacts'
+			filename '01 - Docker - Jenkinsfile - Archive Artifact'
 		}
 	}
     stages {
@@ -12,8 +13,8 @@ pipeline {
         }
     }
     post {
-    	always {
-	archiveatrifacts artifacts ''
+    	success {
+		archiveatrifacts artifacts 'googleCurl.html'
 	}
     }
 }

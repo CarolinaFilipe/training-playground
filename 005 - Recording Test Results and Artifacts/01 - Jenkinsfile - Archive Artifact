@@ -14,7 +14,7 @@ pipeline {
     }
     post {
     	success {
-		archiveatrifacts artifacts 'googleCurl.html'
+		archiveArtifacts artifacts 'googleCurl.html'
 	}
     }
 }

@@ -9,6 +9,7 @@ pipeline {
             steps {
 	    	sh "ls -lta"
 		sh "git clean -fd"
+		sh "ls -lta"
                 sh "date > date.txt"
 		sh "ls -lta"
 		

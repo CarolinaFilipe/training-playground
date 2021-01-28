@@ -2,7 +2,7 @@ pipeline {
     agent { 
 		dockerfile { 
 			 filename '03 - Jenkinsfile - Git Image'
-        		 dir '006 - Cleaning Up and Notifications/03 - Jenkinsfile - Git Reset' 
+        		 dir '006 - Cleaning Up and Notifications' 
 		}
 	}
     stages {

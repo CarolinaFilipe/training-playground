@@ -1,7 +1,8 @@
 pipeline {
     agent { 
-		docker { 
-			image 'alpine:latest' 
+		dockerfile { 
+			 filename '03 - Jenkinsfile - Git Image'
+        		 dir '006 - Cleaning Up and Notifications/03 - Jenkinsfile - Git Reset' 
 		}
 	}
     stages {
